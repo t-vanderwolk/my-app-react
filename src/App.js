@@ -3,13 +3,15 @@ import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./page/Home";
 import About from "./page/About";
-import Invoice from "./page/Invoice";
-import RouteAsObj from "./page/RouteAsObj";
+// import Invoice from "./page/Invoice";
+// import RouteAsObj from "./page/RouteAsObj";
 import Search from "./page/Search";
-import UserDashboard from "./page/UserDashboard";
-import UserProfile from "./page/UserProfile";
-import UserEditProfile from "./page/UserEditProfile";
-import AdminDashboard from "./page/AdminDashboard";
+import Prices from "./page/Prices";
+// import UserProfile from "./page/UserProfile";
+// import UserEditProfile from "./page/UserEditProfile";
+
+import "./page/Style.css"
+
 
 function App() {
   return (
@@ -18,18 +20,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        
+        <Route path="/prices" element={<Prices  />} />
         {/* Approach #1 */}
-        <Route path="/user">
-           <Route index element={<UserDashboard />} />
-           <Route path="profile" element={<UserProfile />} />
-           <Route path=":editId" element={<UserEditProfile />} /> 
-           <Route path="admin" element={<AdminDashboard />} /> 
-        </Route>
+  
         
-        {/* Approach #2 */}
+        {/* Approach #2
         <Route path="invoice/*" element={<Invoice  />} />
-        <Route path="object_route/*" element={<RouteAsObj  />} />
+        <Route path="object_route/*" element={<RouteAsObj  />} /> */}
 
         <Route path="search" element={<Search  />} />
         <Route path="*" element={<NotFound />} />

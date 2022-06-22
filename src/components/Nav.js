@@ -45,14 +45,21 @@ const Nav = () => {
           };
         }} to="/about">About</NavLink>
       </li>
-      <li onClick={toggleSubmenu} className="sub__menus__arrows"><NavLink className={({ isActive }) => isActive ? "active" : ""} to="/user">Dashboard <FiChevronDown /> </NavLink>
+      <li>
+        <NavLink onClick={toggleClass} style={({ isActive }) => {
+          return { 
+            color: isActive ? "#ffe500" : ""
+          };
+        }} to="/prices">Prices</NavLink>
+      </li>
+      {/* <li onClick={toggleSubmenu} className="sub__menus__arrows"><NavLink className={({ isActive }) => isActive ? "active" : ""} to="/user">Dashboard <FiChevronDown /> </NavLink>
         <ul className={boxClassSubMenu.join(' ')} > 
           <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/user">User Dashboard</NavLink></li>
           <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/user/admin">Admin Dashboard</NavLink></li>
         </ul>
-      </li>
-      <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/invoice">Invoice</NavLink></li>
-      <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/object_route"> Route as Object </NavLink></li>
+      </li> */}
+      {/* <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/invoice">Invoice</NavLink></li>
+      <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/object_route"> Route as Object </NavLink></li> */}
       <li><NavLink onClick={toggleClass} className={({ isActive }) => isActive ? "active" : ""} to="/search"> Search </NavLink></li>
       <Outlet />
     </ul>
